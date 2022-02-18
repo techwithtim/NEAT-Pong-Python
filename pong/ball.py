@@ -19,7 +19,7 @@ class Ball:
 
     def _get_random_angle(self, min_angle, max_angle, excluded):
         angle = 0
-        while angle not in excluded:
+        while angle in excluded:
             angle = math.radians(random.randrange(min_angle, max_angle))
 
         return angle

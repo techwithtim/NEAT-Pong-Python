@@ -79,9 +79,9 @@ class PongGame:
             else:
                 self.game.move_paddle(left=False, up=False)
 
-            game_info = game.loop()
+            game_info = self.game.loop()
 
-            game.draw(draw_score=False, draw_hits=True)
+            self.game.draw(draw_score=False, draw_hits=True)
             pygame.display.update()
 
             if game_info.left_score >= 1 or game_info.right_score >= 1 or game_info.left_hits > 50:
